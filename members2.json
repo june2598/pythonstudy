@@ -1,0 +1,14 @@
+{
+    "마늘": {
+        "age": "40",
+        "email": "test1@kh.com"
+    },
+    "토끼": {
+        "age": "30",
+        "email": "test2@kh.com"
+    },
+    "호랑이": {
+        "age": "50",
+        "email": "test3@kh.com"
+    }
+}
