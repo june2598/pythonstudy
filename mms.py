@@ -182,7 +182,6 @@ def main() :
           name = input('이름 : ')
           member = member_management.get_member(name)
           print(member)
-          pass
         case '3' :
           name = input('이름 : ')
           member = member_management.get_member(name)
