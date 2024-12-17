@@ -1,0 +1,11 @@
+OrderID,Product,Quantity,Price,Date,CustomerID
+1,Widget A,4,20,2023-01-01,C001
+2,Widget B,2,30,2023-01-02,C002
+3,Widget A,1,20,2023-01-03,C001
+4,Widget C,5,15,2023-01-04,C003
+5,Widget B,3,30,2023-01-05,C002
+6,Widget A,2,20,2023-01-06,C004
+7,Widget C,1,15,2023-01-07,C003
+8,Widget B,4,30,2023-01-08,C005
+9,Widget A,3,20,2023-01-09,C001
+10,Widget C,2,15,2023-01-10,C006
