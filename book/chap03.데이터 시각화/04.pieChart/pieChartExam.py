@@ -1,12 +1,12 @@
 import matplotlib
 import matplotlib.pyplot as plt
-###############################################################################
+
 plt.rc('font', family='Malgun Gothic')
 matplotlib.rcParams['axes.unicode_minus'] = False
 cnt, PNG, UNDERBAR = 0, '.png', '_'
 CHART_NAME = 'pieChartExam'
-filename = './../data/주요발생국가주간동향(4월2째주).csv'
-###############################################################################
+filename = './../../data/주요발생국가주간동향(4월2째주).csv'
+
 import pandas as pd
 
 data = pd.read_csv(filename, index_col='국가')
