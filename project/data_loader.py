@@ -1,5 +1,5 @@
 import pandas as pd
-
+import datetime
 def load_sector_data(market=None, month_ago=1):
     """
     주어진 시장에 따라 적절한 CSV 파일을 로드하는 함수.
@@ -13,12 +13,18 @@ def load_sector_data(market=None, month_ago=1):
     Raises:
     ValueError: 지원되지 않는 시장이 입력된 경우.
     """
+    
+    # 오늘 날짜 구하기
+    today = datetime.datetime.today()
+    today_str = today.strftime('%Y-%m-%d')
+    
+    
     if month_ago < 0:
         raise ValueError("month_ago는 0 이상의 정수여야 합니다.")
     
     if market in ['KOSPI', 'KOSDAQ', 'ETF'] :
         print(f'{month_ago}개월 간의 data를 불러옵니다.')
-        df = pd.read_csv(f'{market}_add_sector_{month_ago}m.csv')
+        df = pd.read_csv(f'{market}_add_sector_{today_str}_{month_ago}m.csv')
     else:
         raise ValueError(" 'KOSPI', 'KOSDAQ', 'ETF' 세 시장만 지원하는 기능입니다.")
       
