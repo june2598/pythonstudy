@@ -230,13 +230,13 @@ def add_sector_info(market=None, month_ago=3):
 
   # 기간별 전처리 데이터 csv파일로 저장 
   if market is not None:
-    df.to_csv(f'{market}_add_sector_{month_ago}m.csv', index=False, encoding='utf-8-sig')
+    df.to_csv(f'{market}_add_sector_{today_str}_{month_ago}m', index=False, encoding='utf-8-sig')
   else:
     raise ValueError("파일 이름을 저장하기 위한 적절한 매개변수가 필요합니다.")
   return df
 
-# 1개월 단위로 1/3/6/12개월 시장 데이터 csv를 저장 (총 12개, 1시간 가량 소요 예상)
+# 1개월 단위로 1/3 개월 시장 데이터 csv를 저장
 for market in ['KOSPI','KOSDAQ','ETF'] : 
-  for month in [1, 3, 6, 12] :
+  for month in [1, 3] :
     print(f"Processing {market} for {month} month(s) ago...")
     add_sector_info(market=market, month_ago=month)
